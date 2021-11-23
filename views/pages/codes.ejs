@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> </head>
+
+<body class="container">
+  <script></script>
+  <main>
+    <div>
+      <h1>Movie Codes</h1>
+      <form action="/movies" method="get">
+      <ul>
+        <% for (const element of Object.values(codes)) { %>
+          <li><%= element %></li><button tpye="submit" formmethod="post"
+            formaction="/codes/<%= element %>/delete">delete</button>
+          <% } %>
+      </ul>
+    </form>
+      <form action="/codes" method="post">
+        <label for="code">Enter:  </label>
+        <input id="cdoe" type="text" name="code" value="code" />
+        <input type="submit" value="OK" />
+    </div>
+  </main>
+</body>
+
+</html>
